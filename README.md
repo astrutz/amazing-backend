@@ -27,6 +27,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+### Marker Controller 
+Get all markers: GET /marker \
+Get a marker by id: GET /marker/id \
+Push a marker (currently there is no database): POST /marker 
+
 ## Installation
 
 ```bash
