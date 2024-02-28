@@ -9,7 +9,7 @@ import { ConfigModule } from "@nestjs/config";
   imports: [
     MarkerModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.ks2c83d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`),
+    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@amazingcluster.ocrddeo.mongodb.net/?retryWrites=true&w=majority&appName=amazingcluster`),
   ],
   controllers: [AppController],
   providers: [AppService],
