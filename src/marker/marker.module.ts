@@ -1,9 +1,12 @@
 import { Module } from '@nestjs/common';
-import { MarkerService } from './marker.service';
+import { MarkersService } from './markers.service';
 import { MarkerController } from './marker.controller';
+import { MongooseModule } from "@nestjs/mongoose";
+import { Marker, MarkerSchema } from "./schemas/marker.schema";
 
 @Module({
-  providers: [MarkerService],
+  imports: [MongooseModule.forFeature([{name: Marker.name, schema: MarkerSchema}])],
+  providers: [MarkersService],
   controllers: [MarkerController]
 })
 export class MarkerModule {}
