@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UsePipes, ValidationPipe } from "@nestjs/common";
+import { Body, Controller, Get, Post, UsePipes, ValidationPipe } from "@nestjs/common";
 import { MarkersService } from "./markers.service";
 import { CreateMarkerDto } from "./dto/CreateMarker.dto";
 
@@ -13,5 +13,10 @@ export class MarkerController {
   createMarker(@Body() createMarkerDto: CreateMarkerDto) {
     console.log(createMarkerDto);
     return this._markersService.createMarker(createMarkerDto);
+  }
+
+  @Get()
+  getUsers() {
+    return this._markersService.getMarkers();
   }
 }

@@ -10,12 +10,12 @@ export class MarkersService {
   constructor(@InjectModel(Marker.name) private markerModel: Model<Marker>,
               @InjectConnection() private connection: Connection) { }
 
-  getAll(): Promise<Marker[]> {
-    return this.markerModel.find().exec();
-  }
-
   async createMarker(createMarkerDto: CreateMarkerDto): Promise<Marker> {
     const newMarker = new this.markerModel(createMarkerDto);
     return newMarker.save();
+  }
+
+  async getMarkers(): Promise<Marker[]> {
+    return this.markerModel.find();
   }
 }
