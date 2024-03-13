@@ -1,12 +1,12 @@
 import { IsString, IsNumber, IsLatitude, IsLongitude, IsNotEmpty, IsOptional } from "class-validator";
 
-export class CreateMarkerDto {
+export class UpdateMarkerDto {
   @IsNotEmpty()
   @IsString()
   name: string;
 
-  @IsString()
   @IsOptional()
+  @IsString()
   description: string;
 
   @IsNotEmpty()
