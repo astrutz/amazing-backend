@@ -20,6 +20,10 @@ export class MarkersService {
     return this.markerModel.findByIdAndUpdate(markerId, updateMarkerDto, {new: true});
   }
 
+  async deleteMarker(markerId: string): Promise<Marker> {
+   return this.markerModel.findByIdAndDelete(markerId);
+  }
+
   async getMarkers(): Promise<Marker[]> {
     return this.markerModel.find();
   }
