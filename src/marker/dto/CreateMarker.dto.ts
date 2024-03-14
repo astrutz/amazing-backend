@@ -1,4 +1,4 @@
-import { IsString, IsNumber, IsLatitude, IsLongitude, IsNotEmpty, IsOptional } from "class-validator";
+import { IsString, IsNumber, IsLatitude, IsLongitude, IsNotEmpty } from "class-validator";
 
 export class CreateMarkerDto {
   @IsNotEmpty()
@@ -6,7 +6,6 @@ export class CreateMarkerDto {
   name: string;
 
   @IsString()
-  @IsOptional()
   description: string;
 
   @IsNotEmpty()
@@ -18,4 +17,7 @@ export class CreateMarkerDto {
   @IsNumber()
   @IsLongitude()
   lng: number;
+
+  @IsString()
+  pictureUrl: string;
 }

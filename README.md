@@ -27,10 +27,18 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Create an .env file for
+DATABASE_USER \
+DATABASE_PASSWORD \
+ACCESS_KEY_ID \
+SECRET_ACCESS_KEY \
+BUCKET_KEY
+
 ### Marker Controller 
 Get all markers: GET /marker \
 Get a marker by id: GET /marker/id \
-Push a marker (currently there is no database): POST /marker 
+Push a marker: POST /marker \
+Push a picture: POST /picture
 
 ## Installation
 
