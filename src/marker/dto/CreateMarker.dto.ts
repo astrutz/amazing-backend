@@ -18,6 +18,7 @@ export class CreateMarkerDto {
   @IsLongitude()
   lng: number;
 
+  @IsOptional()
   @IsString()
   pictureUrl: string;
 }
