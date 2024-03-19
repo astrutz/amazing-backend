@@ -3,7 +3,14 @@ import { HydratedDocument } from 'mongoose';
 
 export type MarkerDocument = HydratedDocument<Marker>;
 
-@Schema()
+@Schema({
+  toObject:{
+    versionKey: false
+  },
+  toJSON:{
+    versionKey: false
+  }
+})
 export class Marker {
   @Prop({ required: true })
   name: string;
