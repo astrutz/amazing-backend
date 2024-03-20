@@ -35,10 +35,11 @@ SECRET_ACCESS_KEY \
 BUCKET_KEY
 
 ### Marker Controller 
-Get all markers: GET /marker \
-Get a marker by id: GET /marker/id \
-Push a marker: POST /marker \
-Push a picture: POST /picture
+* Get all markers: GET /marker
+* Get a marker by id: GET /marker/id
+* Push a marker: POST /marker
+* Push a picture: POST /picture
+  * Payload must contain multipart file. Property name: _file_ 
 
 ## Installation
 
