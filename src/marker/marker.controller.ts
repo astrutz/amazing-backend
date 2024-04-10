@@ -6,13 +6,14 @@ import { CreateMarkerDto } from './dto/CreateMarker.dto';
 export class MarkerController {
   constructor(
     private readonly _markersService: MarkersService,
-  ) {
-  }
+  ) {}
 
   @Post()
   @UsePipes(new ValidationPipe())
-  createMarker(@Body() createMarkerDto: CreateMarkerDto) {
-    console.log(createMarkerDto);
+  async createMarker(@Body() createMarkerDto: CreateMarkerDto) {
+    if ((await this._markersService.alreadyExists(createMarkerDto))) {
+      this._markersService.throwError('Marker already exists', 400);
+    }
     return this._markersService.createMarker(createMarkerDto);
   }
 
