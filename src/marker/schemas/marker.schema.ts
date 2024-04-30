@@ -26,6 +26,9 @@ export class Marker {
 
   @Prop({ required: false })
   pictureUrl: string;
+
+  @Prop({ required: false })
+  uploader: string;
 }
 
 export const MarkerSchema = SchemaFactory.createForClass(Marker);
