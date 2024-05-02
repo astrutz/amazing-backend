@@ -5,6 +5,11 @@ export class CreateMarkerDto {
   @IsString()
   name: string;
 
+  @IsNotEmpty()
+  @IsString()
+  @IsOptional()
+  uploader: string;
+
   @IsString()
   description: string;
 
