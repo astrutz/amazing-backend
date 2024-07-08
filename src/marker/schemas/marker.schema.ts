@@ -29,9 +29,6 @@ export class Marker {
 
   @Prop({ required: false })
   uploader: string;
-
-  @Prop({ required: false })
-  country: string;
 }
 
 export const MarkerSchema = SchemaFactory.createForClass(Marker);
