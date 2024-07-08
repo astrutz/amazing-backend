@@ -41,6 +41,15 @@ BUCKET_KEY
 * Push a picture: POST /picture
   * Payload must contain multipart file. Property name: _file_ 
 
+## Deploy
+Well, this is funny. Because of Vercels weirdness, a deployment can only be done by the repository owner with:
+
+```bash
+$ npm run build
+$ vercel login
+$ vercel deploy --prod
+```
+
 ## Installation
 
 ```bash
