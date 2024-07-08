@@ -11,6 +11,10 @@ export class CreateMarkerDto {
   uploader: string;
 
   @IsString()
+  @IsOptional()
+  country: string;
+
+  @IsString()
   description: string;
 
   @IsNotEmpty()

@@ -9,6 +9,10 @@ export class UpdateMarkerDto {
   @IsString()
   description: string;
 
+  @IsOptional()
+  @IsString()
+  country: string;
+
   @IsNotEmpty()
   @IsNumber()
   @IsLatitude()
