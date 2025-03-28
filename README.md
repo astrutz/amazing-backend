@@ -30,9 +30,8 @@
 ## Create an .env file for
 DATABASE_USER \
 DATABASE_PASSWORD \
-ACCESS_KEY_ID \
-SECRET_ACCESS_KEY \
-BUCKET_KEY
+IMGBB_API_KEY \
+IMGBB_API_URL
 
 ### Marker Controller 
 * Get all markers: GET /marker

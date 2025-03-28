@@ -9,7 +9,7 @@ export class PictureController {
   ) {
   }
 
-  @UseInterceptors(FileInterceptor('file'))
+  @UseInterceptors(FileInterceptor('image'))
   @Post()
   uploadFile(
     @UploadedFile() file: Express.Multer.File,
