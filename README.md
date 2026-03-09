@@ -28,10 +28,15 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Create an .env file for
-DATABASE_USER \
-DATABASE_PASSWORD \
-IMGBB_API_KEY \
-IMGBB_API_URL
+```
+DATABASE_USER
+DATABASE_PASSWORD
+R2_BUCKET
+R2_PUBLIC_URL
+R2_ENDPOINT
+R2_ACCESS_KEY
+R2_SECRET_KEY
+```
 
 ### Marker Controller 
 * Get all markers: GET /marker

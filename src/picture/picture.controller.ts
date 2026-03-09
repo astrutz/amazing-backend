@@ -6,14 +6,14 @@ import { FileInterceptor } from '@nestjs/platform-express';
 export class PictureController {
   constructor(
     private readonly _pictureService: PictureService,
-  ) {
-  }
+  ) {}
 
   @UseInterceptors(FileInterceptor('image'))
   @Post()
   uploadFile(
     @UploadedFile() file: Express.Multer.File,
   ) {
-    return this._pictureService.saveFileAndReturnUuid(file, file.originalname.split('.')[1]);
+    const extension = file.originalname.split('.').pop();
+    return this._pictureService.saveFileAndReturnUuid(file, extension);
   }
 }
