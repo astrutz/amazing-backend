@@ -9,6 +9,7 @@ import { GeheimmarkerController } from './geheimMarker.controller';
   imports: [MongooseModule.forFeature([{ name: Marker.name, schema: MarkerSchema }])],
   providers: [MarkersService],
   controllers: [MarkerController, GeheimmarkerController],
+  exports: [MarkersService]
 })
 export class MarkerModule {
 }
